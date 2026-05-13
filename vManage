@@ -4,13 +4,13 @@
 2. config 
     system 
       host-name vMGMT
-      system-ip 192.168.1.55
+      system-ip 1.1.1.1
       site-id 255
       organization kuterlab
       vbond 192.168.1.56
     vpn 0
       ip route 0.0.0.0/0 192.168.1.1
-      int eth0 192.168.x.x/30
+      int eth0 192.168.1.55/30
       no shut
       tunnel-interface
       allow-service all
