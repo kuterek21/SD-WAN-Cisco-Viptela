@@ -1,1 +1,11 @@
+vbond# config
+Entering configuration mode terminal
+vbond(config)# system
+vbond(config-system)# host-name Validator
+vbond(config-system)# system-ip 1.1.1.2
+vbond(config-system)# site-id 255
+vbond(config-system)# organization-name kuterlab
+vbond(config-system)# vbond 192.168.1.56 local
+vbond(config-system)# exi
+vbond(config)#
 
