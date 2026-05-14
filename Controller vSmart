@@ -1,1 +1,2 @@
 
+openssl x509 -req -in vsmart_csr -CA SDWAN.pem -CAkey SDWAN.key -CAcreateserial -out NewCertificate.csr -days 2000 -sha256
