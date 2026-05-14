@@ -8,4 +8,18 @@ vbond(config-system)# organization-name kuterlab
 vbond(config-system)# vbond 192.168.1.56 local
 vbond(config-system)# exi
 vbond(config)#
-
+!
+VPN 512
+ip route 0.0.0.0/0 192.168.1.1
+int eth0
+ip add 192.168.1.56/24
+no shut
+!
+VPN 0
+int ge0/0
+ip add 16.16.2.3/24
+no shut
+tunnel-interface
+encapsulation ipsec 
+allow-service all
+!
