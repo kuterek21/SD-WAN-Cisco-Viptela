@@ -30,4 +30,19 @@ openssl genrsa -out SDWAN.key 2048
 openssl req -x509 -new -nodes -key SDWAN.key -sha256 -days 2000 -subj "/C=US/ST=Virginia/L=Radiant/O=kuterlab/CN=kuterlab" -out SDWAN.pem
     then create a root certificate using that key
 openssl x509 -req -in vbond.csr -CA SDWAN.pem -CAkey SDWAN.key -CAcreateserial -out NewCertificate.csr -days 2000 -sha256
-      
+-------------------------------------------------------------------------------------------
+GUI
+Administration / Settings / System
+- Organization Name
+- Validator
+Trust and Privacy
+- Controler Certificate Authorization
+    - Enterprise Root Certificate
+# Check in Monitor that vManage is presented by cert is being invalid
+Configuration / Certificates / Control Components
+- three dots Generate CSR
+
+== openssl x509 -req -in vmanage_csr -CA SDWAN.pem -CAkey SDWAN.key -CAcreateserial -out NewCertificate.csr -days 2000 -sha256
+
+Can a NewCert and paste it back in GUI into Install Certificate -> Install 
+
