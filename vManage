@@ -8,17 +8,21 @@
       site-id 255
       organization kuterlab
       vbond 192.168.1.56
-    vpn 0
-      ip route 0.0.0.0/0 192.168.1.1
-      int eth0 192.168.1.55/30
-      no shut
+    vpn 0 # Transport VPN Wan links,
+      
+      int eth1 
+        ip add 16.16.2.2/32
+        no shut
       tunnel-interface
       allow-service all
-    vpn 512
-      ip route 0.0.0.0/0 10.1.0.0
+    vpn 512 # mgmt vpn 
+      ip route 0.0.0.0/0 192.168.1.1
       int eth1 
-        ip add 10.1.0.1/24
+        ip add 192.168.1.55/24
     commit and-quit
       
   // do sh run system
+-------------------------------------------------------------------------------------------
+
+
       
