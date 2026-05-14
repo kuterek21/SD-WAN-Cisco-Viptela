@@ -11,5 +11,7 @@
     - admin (Cisco123)
     1 - comupe and data
     2 - vdb
+### request nms application-server status
+
 ### vManage Certificates
     
