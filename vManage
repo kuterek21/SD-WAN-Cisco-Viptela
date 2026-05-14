@@ -23,6 +23,11 @@
       
   // do sh run system
 -------------------------------------------------------------------------------------------
-
-
+ls #checks all the files
+    create a key?
+openssl genrsa -out SDWAN.key 2048
+    then generate RSA key
+openssl req -x509 -new -nodes -key SDWAN.key -sha256 -days 2000 -subj "/C=US/ST=Virginia/L=Radiant/O=kuterlab/CN=kuterlab" -out SDWAN.pem
+    then create a root certificate using that key
+openssl x509 -req -in vbond.csr -CA SDWAN.pem -CAkey SDWAN.key -CAcreateserial -out NewCertificate.csr -days 2000 -sha256
       
