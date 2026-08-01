@@ -15,4 +15,4 @@
     -    request nms application-server status
 
 ### vManage Certificates
-#### (Create a vMGMT to Root CA)[]    
+#### (Create a vMGMT to Root CA)[https://github.com/kuterek21/SD-WAN-Cisco-Viptela/blob/main/Create%20Root%20CA]    
